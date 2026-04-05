@@ -194,16 +194,14 @@
     </choose>
   </macro>
   <macro name="format">
-    <group suffix=" ">
-      <choose>
-        <if type="song motion_picture broadcast" match="any">
-          <text variable="medium"/>
-        </if>
-        <else>
-          <text variable="genre"/>
-        </else>
-      </choose>
-    </group>
+    <choose>
+      <if type="song motion_picture broadcast" match="any">
+        <text variable="medium" suffix=" "/>
+      </if>
+      <else>
+        <text variable="genre" suffix=" "/>
+      </else>
+    </choose>
   </macro>
   <macro name="container">
     <choose>
