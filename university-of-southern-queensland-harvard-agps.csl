@@ -128,7 +128,7 @@
   </macro>
   <macro name="title">
     <choose>
-      <if type="chapter paper-conference article-journal article-magazine article-newspaper broadcast interview manuscript map personal_communication speech thesis map post post-weblog" match="none">
+      <if type="chapter paper-conference article-journal article-magazine article-newspaper broadcast interview manuscript map personal_communication speech thesis post post-weblog" match="none">
         <text variable="title" font-style="italic" suffix=" "/>
       </if>
       <else>
