@@ -129,9 +129,7 @@
   <macro name="title">
     <choose>
       <if type="chapter paper-conference article-journal article-magazine article-newspaper broadcast interview manuscript map personal_communication speech thesis map post post-weblog" match="none">
-        <group suffix=" ">
-          <text variable="title" font-style="italic"/>
-        </group>
+        <text variable="title" font-style="italic" suffix=" "/>
       </if>
       <else>
         <text variable="title" quotes="true" suffix=", "/>
@@ -215,17 +213,13 @@
             <choose>
               <if variable="editor author" match="all"/>
               <else>
-                <group suffix=" ">
-                  <text term="in"/>
-                </group>
+                <text term="in" suffix=" "/>
               </else>
             </choose>
             <text variable="container-title" font-style="italic" suffix=", "/>
           </if>
           <else-if variable="event">
-            <group delimiter=" ">
-              <text term="presented at"/>
-            </group>
+            <text term="presented at" suffix=" "/>
             <text variable="event"/>
             <text variable="event-place" prefix=", "/>
           </else-if>
