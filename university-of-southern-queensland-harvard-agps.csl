@@ -255,16 +255,14 @@
   <macro name="access-date">
     <choose>
       <if variable="URL accessed" match="all">
-        <group suffix=" ">
-          <choose>
-            <if type="song">
-              <text term="accessed"/>
-            </if>
-            <else>
-              <text term="retrieved"/>
-            </else>
-          </choose>
-        </group>
+        <choose>
+          <if type="song">
+            <text term="accessed" suffix=" "/>
+          </if>
+          <else>
+            <text term="retrieved" suffix=" "/>
+          </else>
+        </choose>
         <date variable="accessed" delimiter=" " suffix=" ">
           <date-part name="day" form="numeric"/>
           <date-part name="month" form="long"/>
@@ -279,9 +277,7 @@
   <macro name="publisher">
     <choose>
       <if type="article-journal article-magazine article-newspaper article" match="none">
-        <group suffix=" ">
-          <text variable="publisher"/>
-        </group>
+        <text variable="publisher"/>
       </if>
     </choose>
   </macro>
